@@ -27,8 +27,5 @@ jobs:
         kubectl rollout status deployment/nodejs-app --timeout=120s
     - name: Test service URLs
       run: |
-          #minikube service list
-          #minikube service nodejs-app --url
-          kubectl get pods -o wide
-          kubectl get svc
-          kubectl get deployments
+          minikube service list
+          minikube service nodejs-app --url
